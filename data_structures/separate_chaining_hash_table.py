@@ -93,6 +93,19 @@ class SeparateChainingHashTable(Generic[T]):
 
         raise KeyError(key)
 
+    def __contains__(self, key: str) -> bool:
+        """
+        Check if key exists, if so return True, else False
+        """
+        position = self.hash(key)
+        if self.table[position] is None:
+            return False
+
+        for item in self.table[position]:
+            if item[0] == key:
+                return True
+        return False
+
     def is_empty(self):
         """
         Returns whether the hash table is empty
