@@ -25,7 +25,7 @@ Example 3:
 **Output**: [0,1]  
 
 
-Challenge: Can you come up with an algorithm that is less than O($n^2$) time complexity?
+Challenge: Can you come up with an algorithm that is less than O($n^2$) time complexity? (You can assume dictionary operations are O(1) for this question)
 
 <details>
 <summary>Hint for Challenge</summary>
