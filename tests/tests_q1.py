@@ -17,7 +17,7 @@ class Test_Q1(unittest.TestCase):
 
     @number("1.1")
     def test_examples(self):
-        self.customAssertEqual(two_sum(AL([2,7,11,15]), 9), [0,1])
+        self.customAssertEqual(two_sum(AL([2,7,11,15]), 13), [0,2])
         self.customAssertEqual(two_sum(AL([3,2,4]), 6), [1,2])
         self.customAssertEqual(two_sum(AL([3,3]), 6), [0,1])
         
