@@ -106,7 +106,7 @@ class LinkedListIterator(Generic[T]):
         """
         if self.current is not None:
             item = self.current.item
-            self.current = self.current.link
+            self.current = self.current.next
             return item
         else:
             raise StopIteration

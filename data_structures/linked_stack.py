@@ -16,7 +16,7 @@ class Node(Generic[T]):
     def __init__(self, item: T = None) -> None:
         """ Object initializer. """
         self.item = item
-        self.link = None
+        self.next = None
 
 
 class LinkedStack(Stack[T]):
@@ -55,7 +55,7 @@ class LinkedStack(Stack[T]):
             :complexity: O(1)
         """
         new_node = Node(item)
-        new_node.link = self.top
+        new_node.next = self.top
         self.top = new_node
         self.length += 1
 
@@ -69,7 +69,7 @@ class LinkedStack(Stack[T]):
             raise Exception('Stack is empty')
 
         item = self.top.item
-        self.top = self.top.link
+        self.top = self.top.next
         self.length -= 1
         return item
 
