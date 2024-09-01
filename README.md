@@ -16,7 +16,7 @@ Example 1:
 Explanation: Because nums[0] + nums[2] == 13, we return [0, 2].
 
 Example 2:  
-**Input**: `nums` = [3,2,4], `target` = 6  
+**Input**: `nums` = [2,3,4], `target` = 6  
 **Output**: [1,2]  
 
 
@@ -25,11 +25,11 @@ Example 3:
 **Output**: [0,1]  
 
 
-Challenge: Can you come up with an algorithm that is less than O($n^2$) time complexity? (You can assume dictionary operations are O(1) for this question)
+Challenge: Can you come up with an algorithm that is less than O($n^2$) time complexity? If you assume that all dictionary operations take O(1), could you come up with a solution that is O(n) time complexity?
 
 <details>
 <summary>Hint for Challenge</summary>
-For every index, i, check if you've previously seen a number equal to (target-nums[i]). There is a data structure that allows you to check this relatively quick.
+For every index, i, check if you've previously seen a number equal to (`target - nums[i]`). If so, retrieve the index of the number (`target - nums[i]`). There is a data structure that allows you to check this relatively quick.
 
 </details>  
 
